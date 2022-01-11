@@ -5,6 +5,12 @@
     }
     a {
         text-decoration: none;
+        color: initial;
+    }
+    h1 {
+        text-align: left;
+        margin-left: 30px;
+        font-size: 25px;
     }
     a:visited {
         color: initial;
@@ -42,6 +48,7 @@
     .reservation h1 {
         width: 80%;
         margin-bottom: 0px;
+        text-align: center;
     }
     .reservation p {
         color: #363636;
@@ -59,38 +66,59 @@
     }
     /*#endregion reservation*/
     /*#region fonctionnement*/
-    .fonctionnement h1 {
-        text-align: left;
-        margin-left: 30px;
-        font-weight: bold;
+    .fonctionnement {
+        margin: 60px 0;
     }
     .fonctionnement ul {
         list-style-type: none;
     }
     .fonctionnement a {
+        margin: 20px 30px 20px 0;
         background-color: #F6F6F6;
-        border-radius: 7em;
+        box-shadow: 5px 4px 13px 2px #e7e7e7;
+        border-radius: 25px;
         border-style: none;
         font-weight: bold;
+        display: flex;
+    }
+    .fonctionnement a:hover {
+        background-color: #F5EDFF;
+    }
+    .fonctionnement a i:hover {
+        color: #9356DC;
+    }
+    .number {
+        margin: auto;
+        border-radius: 23px;
+        height: 18px;
+        width: 25px;
+        background-color: #9356DC;
+        font-size: 13px;
+        color: #ffffff;
+        padding-top: 5px;
+        position: relative;
+        left: -10px;
     }
     .btn {
         width: 350px;
         margin: 10px 5px 10px 5px;
+        padding: 20px 0;
     }
-    .fonctionnement button {
-        border-radius: 7em;
-        border-style: none;
-        background-color: rgb(250, 245, 245);
+    .btn i {
+        margin-right: 25px;
+        font-size: 20px;
+        color: #767676;
     }
     /*#region fonctionnement*/
     /*#region restaurants*/
     .restaurants h1 {
-        text-align: left;
+        /* text-align: left;
         margin-left: 30px;
-        font-weight: bold;
+        font-weight: bold; */
     }
     .restaurants {
         background-color: #F6F6F6;
+        padding-top: 20px;
     }
     .card-img img {
         width: 100%;
