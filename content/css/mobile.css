@@ -1,0 +1,119 @@
+@media all and (max-device-width: 600px) {
+    body {
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+    }
+    a {
+        text-decoration: none;
+    }
+    a:visited {
+        color: initial;
+    }
+    /*#region logo*/
+    .logo {
+        margin: 20px 0 10px 0;
+    }
+    .logo img {
+        width: 50%;
+    }
+    /*#endregion logo*/
+    /*#region reservation*/
+    .location {
+        background-color: #EAEAEA;
+        padding: 15px 0;
+        box-shadow: 5px -3px 4px 0px #c4c4c4
+    }
+    .location label {
+        font-size: 20px;
+        font-weight: bold;
+        color: #353535;
+    }
+    .location i {
+        margin: 0 15px 0 -30px;
+    }
+    .reservation {
+        background-color: #F6F6F6;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0px;
+        padding-bottom: 60px;
+    }
+    .reservation h1 {
+        width: 80%;
+        margin-bottom: 0px;
+    }
+    .reservation p {
+        color: #363636;
+        font-size: 20px;
+        margin-bottom: 35px;
+    }
+    .reservation button {
+        border-radius: 7em;
+        padding: 20px 30px;
+        font-size: 20px;
+        background: linear-gradient(170deg, #FF79DA, #c18dda);
+        box-shadow: 3px 4px 2px #c4c4c4;
+        border-style: none;
+        color: #ffffff;
+    }
+    /*#endregion reservation*/
+    /*#region fonctionnement*/
+    .fonctionnement h1 {
+        text-align: left;
+        margin-left: 30px;
+        font-weight: bold;
+    }
+    .fonctionnement ul {
+        list-style-type: none;
+    }
+    .fonctionnement a {
+        background-color: #F6F6F6;
+        border-radius: 7em;
+        border-style: none;
+        font-weight: bold;
+    }
+    .btn {
+        width: 350px;
+        margin: 10px 5px 10px 5px;
+    }
+    .fonctionnement button {
+        border-radius: 7em;
+        border-style: none;
+        background-color: rgb(250, 245, 245);
+    }
+    /*#region fonctionnement*/
+    /*#region restaurants*/
+    .restaurants h1 {
+        text-align: left;
+        margin-left: 30px;
+        font-weight: bold;
+    }
+    .restaurants {
+        background-color: #F6F6F6;
+    }
+    .card-img img {
+        width: 100%;
+        border-radius: 5% 5% 0 0;
+    }
+    .restaurant-list-card {
+        background-color: #ffffff;
+        margin: 0 30px;
+        border-radius: 0 0 5% 5%;
+        box-shadow: 0px 4px 1px 0 #eeeeee;
+    }
+    /*#endregion restaurant/
+    /*#region footer*/
+    .footer {
+        background-color: rgb(51, 50, 50);
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer li {
+        color: white;
+        list-style-type: none;
+        padding: 4px;
+    }
+    /*#endregion footer*/
+}
