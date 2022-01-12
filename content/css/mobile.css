@@ -109,20 +109,43 @@
         font-size: 20px;
         color: #767676;
     }
-    /*#region fonctionnement*/
+    /*#endregion fonctionnement*/
     /*#region restaurants*/
-    .restaurants h1 {
-        /* text-align: left;
-        margin-left: 30px;
-        font-weight: bold; */
-    }
     .restaurants {
         background-color: #F6F6F6;
         padding-top: 20px;
+        padding-bottom: 70px;
     }
-    .card-img img {
+    .card {
+        margin-bottom: 30px;
+    }
+    .card-body {
+        display: flex;
+    }
+    .card-title {
+        width: 90%;
+        text-align: left;
+        padding-left: 10px;
+    }
+    .card-title p {
+        margin-top: -10px;
+    }
+    .card-heart {
+        width: 10%;
+        margin: auto;
+    }
+    .card-heart i {
+        font-size: 20px;
+    }
+    .card-img {
         width: 100%;
         border-radius: 5% 5% 0 0;
+        height: 180px;
+        object-fit: cover;
+        object-position: bottom;
+    }
+    .card-img.card-center {
+        object-position: 50% 61%;
     }
     .restaurant-list-card {
         background-color: #ffffff;
@@ -130,10 +153,24 @@
         border-radius: 0 0 5% 5%;
         box-shadow: 0px 4px 1px 0 #eeeeee;
     }
+    .card-heart {
+        position: relative;
+    }
+    .heart {
+        cursor: pointer;
+        font-size: 3rem;
+        overflow: hidden;
+        transition: transform 450ms;
+        background-color: 300ms 150ms;
+    }
+    .heart:hover {
+        transform: scale(1.13);
+        background-color: rgb(214, 8, 214);
+    }
     /*#endregion restaurant/
     /*#region footer*/
     .footer {
-        background-color: rgb(51, 50, 50);
+        background-color: rgb(51, 49, 51);
         text-align: left;
         display: flex;
         flex-direction: column;
