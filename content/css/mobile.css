@@ -117,6 +117,18 @@
         padding-top: 20px;
         padding-bottom: 70px;
     }
+    .card-new {
+        color: rgb(78, 167, 112);
+        background-color: rgb(147, 246, 185);
+        position: relative;
+        top: 20px;
+        width: 70px;
+        right: -250px;
+        padding: 7px;
+    }
+    .card-img-zoom {
+        object-position: 0 -195px !important;
+    }
     .card {
         margin-bottom: 30px;
     }
@@ -144,6 +156,10 @@
         height: 180px;
         object-fit: cover;
         object-position: bottom;
+        margin-top: -30px;
+    }
+    .card-img-nomarging {
+        margin-top: 0;
     }
     .card-img.card-center {
         object-position: 50% 61%;
@@ -198,6 +214,16 @@
         color: white;
         list-style-type: none;
         padding: 4px;
+    }
+    .footer img {
+        width: 30%;
+    }
+    .logo-name {
+        font-family: 'Shrikhand', cursive;
+        font-size: 15px;
+    }
+    .footer a {
+        color: #fff;
     }
     /*#endregion footer*/
     /*#region animation*/
@@ -267,19 +293,33 @@
     }
     .menu-meal-item {
         display: flex;
-        margin: auto;
         padding: 20px 11px 20px 10px;
         /*margin: 0 20px 10px -20px;*/
         background: #fff;
         border-radius: 15px;
         /*margin-left: 5%;*/
+        align-items: center;
+        justify-content: space-between;
+    }
+    .meal-item-title {
+        width: 80%;
+        text-align: left;
+    }
+    .menu-price {
+        width: 10%;
     }
     .menu-meal-choice {
-        /* display: none; */
-        opacity: 1.0;
+        display: none;
+        /* opacity: 0.0; */
+        width: 10%;
     }
-    .menu-meal-item:hover+.menu-meal-choice {
-        opacity: 1.0;
+    .menu-meal-item:hover .menu-meal-choice {
+        /* opacity: 1.0; */
+        display: block;
+    }
+    .menu-meal-item:hover .menu-price {
+        /* opacity: 0.0; */
+        display: none;
     }
     /*#endregion menu-details*/
 }
