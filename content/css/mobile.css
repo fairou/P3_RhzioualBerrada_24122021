@@ -170,37 +170,32 @@
         border-radius: 0 0 5% 5%;
         box-shadow: 0px 4px 1px 0 #eeeeee;
     }
-    .card-heart {
-        width: 10%;
-        margin: auto;
-        fill: transparent;
-        stroke: #c18dda;
-        stroke-width: 20;
-        cursor: pointer;
-        position: relative;
+    .logo_hearth {
+        display: none;
     }
-    .card-heart svg {
-        overflow: visible;
-        width: 25px;
-        float: left;
+    .logo_hearth_2 :focus {
+        background: linear-gradient(#ff91e0, #9460d3);
     }
-    .card-heart path {
-        stroke-dashoffset: 0;
-        stroke-dasharray: 1550;
-        transform-origin: center;
+    .logo_hearth_2 {
+        font-size: 30px;
+        color: white;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     }
-    .card-heart .heart-background {
-        position: absolute;
-        left: 0;
-        right: 0;
-        z-index: -1;
-        stroke: none;
+    .logo_hearth_2 :hover {
+        color: #9356dc;
+        background: linear-gradient(#9356dc, #ff79da);
+        text-shadow: none;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        animation: earth 0.2s linear;
     }
-    .card-heart .heart-main:hover path {
-        animation: stroke-animation 2s ease-in-out forwards;
-    }
-    .card-heart .heart-main:hover~.heart-background path {
-        animation: fade-animation 2s ease-in-out forwards;
+    @keyframes earth {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
     }
     /*#endregion restaurant*/
     /*#region footer*/
@@ -294,10 +289,8 @@
     .menu-meal-item {
         display: flex;
         padding: 20px 11px 20px 10px;
-        /*margin: 0 20px 10px -20px;*/
         background: #fff;
         border-radius: 15px;
-        /*margin-left: 5%;*/
         align-items: center;
         justify-content: space-between;
     }
@@ -310,15 +303,12 @@
     }
     .menu-meal-choice {
         display: none;
-        /* opacity: 0.0; */
         width: 10%;
     }
     .menu-meal-item:hover .menu-meal-choice {
-        /* opacity: 1.0; */
         display: block;
     }
     .menu-meal-item:hover .menu-price {
-        /* opacity: 0.0; */
         display: none;
     }
     /*#endregion menu-details*/
