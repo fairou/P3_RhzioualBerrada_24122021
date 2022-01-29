@@ -1,0 +1,791 @@
+                    $Primaire:#9356DC;
+                    $Secondaire:#FF79DA;
+                    $Tertiaire:#99E2D0;
+                    @import "libs/normalize.scss";
+                    body {
+                        font-size: 20px;
+                        font-family: 'Roboto', sans-serif;
+                        text-align: center
+                    }
+                    
+                    a {
+                        text-decoration: none;
+                        color: initial;
+                        &:visited {
+                            color: initial;
+                        }
+                    }
+                    
+                    .section-loader {
+                        height: 95vh;
+                        width: 100vw;
+                        margin: 0;
+                        padding: 0;
+                        // height: 500px;
+                        display: flex;
+                        align-items: center;
+                        overflow: hidden;
+                        position: relative;
+                        -webkit-animation: showLoading 0s ease-in 5s;
+                        animation: showLoading 0s ease-in 5s;
+                        -webkit-animation-fill-mode: forwards;
+                        animation-fill-mode: forwards;
+                        justify-content: center;
+                        & p {
+                            color: $Primaire;
+                            padding-left: 50px;
+                        }
+                    }
+                    
+                    .loader {
+                        width: 50px;
+                        height: 50px;
+                        display: inline-block;
+                        vertical-align: middle;
+                        position: relative;
+                    }
+                    
+                    .loader-anim {
+                        border-radius: 50px;
+                        border: 3px solid transparent;
+                        border-top-color: $Secondaire;
+                        -webkit-animation: spiner 1s linear infinite;
+                        animation: spiner 1s linear infinite;
+                        &:before,
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            top: 5px;
+                            left: 5px;
+                            bottom: 5px;
+                            right: 5px;
+                            border-radius: 50px;
+                            border: 3px solid transparent;
+                            border-top-color: $Tertiaire;
+                            opacity: 0.8;
+                            -webkit-animation: spiner 10s linear infinite;
+                            animation: spiner 10s linear infinite;
+                        }
+                        &:before {
+                            top: 12px;
+                            left: 12px;
+                            bottom: 12px;
+                            right: 12px;
+                            opacity: .5;
+                            -webkit-animation: spiner 5s linear infinite;
+                            animation: spiner 5s linear infinite;
+                        }
+                    }
+                    
+                    @-webkit-keyframes spiner {
+                        0% {
+                            transform: rotate(0deg);
+                        }
+                        100% {
+                            transform: rotate(360deg);
+                        }
+                    }
+                    
+                    @keyframes spiner {
+                        0% {
+                            transform: rotate(0deg);
+                        }
+                        100% {
+                            transform: rotate(360deg);
+                        }
+                    }
+                    
+                    @-webkit-keyframes showLoading {
+                        to {
+                            visibility: hidden;
+                            width: 0;
+                            height: 0;
+                        }
+                    }
+                    
+                    @keyframes showLoading {
+                        to {
+                            visibility: hidden;
+                            width: 0;
+                            height: 0;
+                        }
+                    }
+                    
+                    main {
+                        -webkit-animation: hideLoading 0s ease-in 5s;
+                        animation: hideLoading 0s ease-in 5s;
+                        -webkit-animation-fill-mode: forwards;
+                        animation-fill-mode: forwards;
+                        visibility: hidden;
+                    }
+                    
+                    @-webkit-keyframes hideLoading {
+                        to {
+                            visibility: visible;
+                        }
+                    }
+                    
+                    @keyframes hideLoading {
+                        to {
+                            visibility: visible;
+                        }
+                    }
+                    
+                    header {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: stretch;
+                        width: 100%;
+                        padding: 30px;
+                        margin-bottom: 30px;
+                        height: 50px;
+                        & div {
+                            flex: 1;
+                        }
+                        & .noflex {
+                            flex: auto;
+                        }
+                        & .header-logo {
+                            text-align: left;
+                            & img {
+                                width: 200px;
+                            }
+                        }
+                        & .header-logo-cart {
+                            text-align: center;
+                            width: 99%;
+                        }
+                        & .header-back {
+                            text-align: left;
+                            width: 1%;
+                        }
+                        & .header-location {
+                            & .search {
+                                display: flex;
+                                justify-content: flex-end;
+                                color: #353535;
+                                & i {
+                                    padding: 10px;
+                                    background-color: #EAEAEA;
+                                    border-radius: 10px 0 0 10px;
+                                }
+                                & input[type=text] {
+                                    border: 1px solid #F2F2F2;
+                                    padding-left: 10px;
+                                    border-radius: 0 10px 10px 0;
+                                }
+                            }
+                        }
+                    }
+                    
+                    .header-card {
+                        margin: -10px auto 15px auto;
+                    }
+                    
+                    .reservation {
+                        background-color: #F6F6F6;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin-bottom: 0px;
+                        padding: 60px 0;
+                        & h1 {
+                            width: 80%;
+                            text-align: center;
+                            font-weight: bold;
+                            margin-bottom: 20px;
+                        }
+                        & p {
+                            color: #363636;
+                            margin-bottom: 35px;
+                        }
+                        & button {
+                            border-radius: 7em;
+                            padding: 15px 30px;
+                            font-size: 17px;
+                            background: linear-gradient(180deg, $Secondaire, $Primaire);
+                            box-shadow: 3px 4px 2px #c4c4c4;
+                            border-style: none;
+                            color: #ffffff;
+                        }
+                    }
+                    
+                    .fonctionnement {
+                        margin: 60px 0;
+                        & h1 {
+                            text-align: left;
+                            margin-left: 10px;
+                            font-weight: bold;
+                        }
+                        & ul {
+                            list-style-type: none;
+                            display: flex;
+                            flex-direction: row;
+                            margin: auto;
+                            width: 70%;
+                            & li {
+                                flex: 1;
+                            }
+                        }
+                        & a {
+                            margin: 20px 30px 20px 0;
+                            background-color: #F6F6F6;
+                            box-shadow: 5px 4px 13px 2px #e7e7e7;
+                            border-radius: 15px;
+                            border-style: none;
+                            font-weight: bold;
+                            display: flex;
+                            &:hover {
+                                background-color: #F5EDFF;
+                            }
+                            &:hover i {
+                                color: #9356DC;
+                            }
+                            & i:hover {
+                                color: #9356DC;
+                            }
+                        }
+                        & .number {
+                            margin: auto;
+                            border-radius: 23px;
+                            height: 40px;
+                            width: 40px;
+                            background-color: #9356DC;
+                            font-size: 13px;
+                            color: #ffffff;
+                            padding-top: 13px;
+                            position: relative;
+                            left: -25px;
+                        }
+                        & .btn {
+                            width: 350px;
+                            margin: 10px 5px 10px 5px;
+                            padding: 10px 0;
+                            height: 40px;
+                            & i {
+                                margin-right: 25px;
+                                font-size: 20px;
+                                color: #767676;
+                            }
+                        }
+                    }
+                    
+                    .restaurants {
+                        background-color: #F6F6F6;
+                        padding-top: 20px;
+                        padding-bottom: 70px;
+                        width: 100%;
+                        & h1 {
+                            text-align: left;
+                            margin-left: 10px;
+                            font-weight: bold;
+                        }
+                        & .restaurant-list-cards {
+                            display: flex;
+                            margin-top: 20px;
+                            & .restaurant-list-card {
+                                margin: 0 30px;
+                                border-radius: 0 0 5% 5%;
+                                box-shadow: 0px 4px 1px 0 #eeeeee;
+                                flex: 1;
+                                & .card-new {
+                                    color: #008766;
+                                    font-weight: 600;
+                                    background-color: #93f6b9;
+                                    font-size: 14px;
+                                    position: relative;
+                                    top: 10px;
+                                    width: 75px;
+                                    right: -330px;
+                                    padding: 7px;
+                                    border-radius: 3px;
+                                }
+                                & .card-new-hide {
+                                    visibility: hidden;
+                                }
+                                & .card {
+                                    background-color: #fff;
+                                    border-radius: 5%;
+                                    & .card-img {
+                                        width: 100%;
+                                        border-radius: 5% 5% 0 0;
+                                        height: 215px;
+                                        -o-object-fit: cover;
+                                        object-fit: cover;
+                                        -o-object-position: bottom;
+                                        object-position: bottom;
+                                        margin-top: -30px;
+                                    }
+                                    & .cart-img-center {
+                                        -o-object-position: 50% 61%;
+                                        object-position: 50% 61%;
+                                    }
+                                }
+                                & .card-body {
+                                    display: flex;
+                                }
+                                & .card-title {
+                                    width: 90%;
+                                    text-align: left;
+                                    padding-left: 10px;
+                                    margin: 10px 0;
+                                    font-size: 15px;
+                                    & h3 {
+                                        font-weight: bold;
+                                        margin-bottom: 5px;
+                                    }
+                                }
+                                & .logo_heart {
+                                    display: none;
+                                }
+                                & .logo_heart_2 {
+                                    font-size: 20px;
+                                    margin: auto;
+                                    padding-right: 20px;
+                                    color: white;
+                                    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+                                    &:focus {
+                                        background: linear-gradient(#ff91e0, #9460d3);
+                                    }
+                                    & :hover {
+                                        color: #9356dc;
+                                        background: linear-gradient(#9356dc, #ff79da);
+                                        text-shadow: none;
+                                        -webkit-text-fill-color: transparent;
+                                        -webkit-background-clip: text;
+                                        -webkit-animation: heart 0.2s linear;
+                                        animation: heart 0.2s linear;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    @-webkit-keyframes heart {
+                        from {
+                            opacity: 0;
+                        }
+                        to {
+                            opacity: 1;
+                        }
+                    }
+                    
+                    @keyframes heart {
+                        from {
+                            opacity: 0;
+                        }
+                        to {
+                            opacity: 1;
+                        }
+                    }
+                    
+                    .cart-menu-img {
+                        max-height: 300px;
+                        & img {
+                            height: 300px;
+                            width: 100vw;
+                            -o-object-fit: cover;
+                            object-fit: cover;
+                            -o-object-position: 50% 55%;
+                            object-position: 50% 55%;
+                            padding: 0;
+                            z-index: 0;
+                        }
+                    }
+                    
+                    .cart-menu {
+                        min-height: 516px;
+                        margin-top: -50px;
+                        border-radius: 30px 30px 0 0;
+                        position: relative;
+                        // padding-top: 30px;
+                        background-color: #F6F6F6;
+                        & .logo_heart {
+                            display: none;
+                        }
+                        & .logo_heart_2 {
+                            font-size: 20px;
+                            margin-left: 75px;
+                            color: #F6F6F6;
+                            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+                            &:focus {
+                                background: linear-gradient(#ff91e0, #9460d3);
+                            }
+                            & :hover {
+                                color: #9356dc;
+                                background: linear-gradient(#9356dc, #ff79da);
+                                text-shadow: none;
+                                -webkit-text-fill-color: transparent;
+                                -webkit-background-clip: text;
+                                -webkit-animation: heart 0.2s linear;
+                                animation: heart 0.2s linear;
+                            }
+                        }
+                        & .cart-menu-title {
+                            display: flex;
+                            width: 330px;
+                            margin: auto;
+                            border: 1px solid #F6F6F6;
+                            border-radius: 0 0 30px 30px;
+                            padding: 20px;
+                            font-family: 'Shrikhand', cursive;
+                            font-size: 20px;
+                        }
+                    }
+                    
+                    .cart-menu-content {
+                        display: flex;
+                        font-size: 16px;
+                        animation: 1.5s ease-in 0s reverse both slidein;
+                        cursor: pointer;
+                        & .cart-menu-details {
+                            flex: 1;
+                        }
+                        & .cart-menu-details {
+                            text-transform: uppercase;
+                            text-align: left;
+                            & .underline {
+                                -webkit-text-decoration-color: $Tertiaire;
+                                text-decoration-color: $Tertiaire;
+                                text-underline-offset: 7px;
+                                text-decoration-thickness: 4px;
+                                padding-left: 50px;
+                            }
+                            & .cart-menu-detail {
+                                padding: 0px 0px 0px 5px;
+                                box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.192);
+                                border-radius: 15px;
+                                margin-bottom: 20px;
+                                margin-left: auto;
+                                margin-right: auto;
+                                margin-top: 30px;
+                                width: 85%;
+                                display: flex;
+                                height: -webkit-fit-content;
+                                height: -moz-fit-content;
+                                height: fit-content;
+                                & .cart-menu-detail-title {
+                                    width: 100%;
+                                    margin: auto;
+                                    text-align: left;
+                                    text-transform: initial;
+                                    overflow: hidden;
+                                    & h2 {
+                                        overflow: hidden;
+                                        white-space: nowrap;
+                                        text-overflow: ellipsis;
+                                        font-weight: bold;
+                                        margin: 0 0 10px 10px;
+                                    }
+                                    & p {
+                                        animation: 0.5s ease-in reverse both width-out;
+                                        overflow: hidden;
+                                        white-space: nowrap;
+                                        text-overflow: ellipsis;
+                                        margin: 0 0 10px 10px;
+                                    }
+                                }
+                                & .cart-menu-detail-price {
+                                    float: right;
+                                    font-weight: bold;
+                                    padding-right: 20px;
+                                    align-self: end;
+                                    padding-bottom: 20px;
+                                }
+                                & .cart-menu-detail-check {
+                                    position: relative;
+                                    color: white;
+                                    background-color: $Tertiaire;
+                                    padding: 10px;
+                                    display: block;
+                                    padding: 30px 0px;
+                                    text-align: center;
+                                    width: 0%;
+                                    float: right;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    text-overflow: clip;
+                                    border-radius: 0px 15px 15px 0px;
+                                    opacity: 0;
+                                    -webkit-animation: 0.5s ease-out checkout;
+                                    animation: 0.5s ease-out checkout;
+                                    & i {
+                                        vertical-align: center;
+                                    }
+                                }
+                                &:hover {
+                                    transition: all 1s ease-out;
+                                }
+                                &:hover .prix p {
+                                    animation: 0.5s ease-in reverse both prix;
+                                }
+                                &:hover .cart-menu-detail-title p {
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    -webkit-animation: 0.5s ease-in both width;
+                                    animation: 0.5s ease-in both width;
+                                    text-overflow: ellipsis;
+                                }
+                                &:hover .cart-menu-detail-check {
+                                    opacity: 1;
+                                    animation: 0.5s ease-in reverse both check;
+                                }
+                                &:hover .cart-menu-detail-check i {
+                                    -webkit-animation: 0.5s alternate rotate;
+                                    animation: 0.5s alternate rotate;
+                                }
+                            }
+                        }
+                    }
+                    
+                    @-webkit-keyframes slidein {
+                        0% {
+                            transform: translatey(0px);
+                            opacity: 1;
+                        }
+                        80% {
+                            opacity: 0;
+                        }
+                        100% {
+                            transform: translatey(20px);
+                            opacity: 0;
+                        }
+                    }
+                    
+                    @keyframes slidein {
+                        0% {
+                            transform: translatey(0px);
+                            opacity: 1;
+                        }
+                        80% {
+                            opacity: 0;
+                        }
+                        100% {
+                            transform: translatey(20px);
+                            opacity: 0;
+                        }
+                    }
+                    
+                    @-webkit-keyframes checkout {
+                        0% {
+                            width: 20%;
+                            opacity: 1;
+                        }
+                        50% {
+                            opacity: 1;
+                        }
+                        100% {
+                            width: 0%;
+                            opacity: 0;
+                        }
+                    }
+                    
+                    @keyframes checkout {
+                        0% {
+                            width: 20%;
+                            opacity: 1;
+                        }
+                        50% {
+                            opacity: 1;
+                        }
+                        100% {
+                            width: 0%;
+                            opacity: 0;
+                        }
+                    }
+                    
+                    @-webkit-keyframes prix {
+                        0% {
+                            margin-left: -50px;
+                        }
+                        100% {
+                            margin-left: 0px;
+                        }
+                    }
+                    
+                    @keyframes prix {
+                        0% {
+                            margin-left: -50px;
+                        }
+                        100% {
+                            margin-left: 0px;
+                        }
+                    }
+                    
+                    @-webkit-keyframes prix_out {
+                        0% {
+                            margin-left: -50px;
+                        }
+                        100% {
+                            margin-left: -20px;
+                        }
+                    }
+                    
+                    @keyframes prix_out {
+                        0% {
+                            margin-left: -50px;
+                        }
+                        100% {
+                            margin-left: -20px;
+                        }
+                    }
+                    
+                    @-webkit-keyframes width-out {
+                        0% {
+                            width: 100%;
+                        }
+                        20% {
+                            width: 95%;
+                            text-overflow: ellipsis;
+                        }
+                        100% {
+                            width: 90%;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                    
+                    @keyframes width-out {
+                        0% {
+                            width: 100%;
+                        }
+                        20% {
+                            width: 95%;
+                            text-overflow: ellipsis;
+                        }
+                        100% {
+                            width: 90%;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                    
+                    @-webkit-keyframes width {
+                        0% {
+                            width: 100%;
+                        }
+                        20% {
+                            width: 75%;
+                            text-overflow: ellipsis;
+                        }
+                        100% {
+                            width: 70%;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                    
+                    @keyframes width {
+                        0% {
+                            width: 100%;
+                        }
+                        20% {
+                            width: 75%;
+                            text-overflow: ellipsis;
+                        }
+                        100% {
+                            width: 70%;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                    
+                    @-webkit-keyframes check {
+                        0% {
+                            width: 20%;
+                        }
+                        100% {
+                            width: 0%;
+                        }
+                    }
+                    
+                    @keyframes check {
+                        0% {
+                            width: 20%;
+                        }
+                        100% {
+                            width: 0%;
+                        }
+                    }
+                    
+                    @-webkit-keyframes rotate {
+                        0% {
+                            transform: rotate(90deg);
+                        }
+                        100% {
+                            transform: rotate(360deg);
+                        }
+                    }
+                    
+                    @keyframes rotate {
+                        0% {
+                            transform: rotate(90deg);
+                        }
+                        100% {
+                            transform: rotate(360deg);
+                        }
+                    }
+                    
+                    .reservation-btn {
+                        background: linear-gradient(180deg, $Secondaire, $Primaire);
+                        position: relative;
+                        box-shadow: 3px 4px 2px #c4c4c4;
+                        border-radius: 40px;
+                        border: none;
+                        font-size: 17px;
+                        color: #FFFFFF;
+                        padding: 20px;
+                        width: 200px;
+                        margin: 30px;
+                        text-align: center;
+                        -webkit-transition-duration: 0.4s;
+                        /* Safari */
+                        transition-duration: 0.4s;
+                        text-decoration: none;
+                        overflow: hidden;
+                        animation: 1.5s ease-in 0s reverse both slidein;
+                        &:after {
+                            content: "";
+                            background: #fff;
+                            display: block;
+                            position: absolute;
+                            padding-top: 300%;
+                            padding-left: 350%;
+                            margin-left: -20px!important;
+                            margin-top: -120%;
+                            opacity: 0;
+                            transition: all 0.8s
+                        }
+                        &:active::after {
+                            padding: 0;
+                            margin: 0;
+                            opacity: 1;
+                            transition: 0s
+                        }
+                    }
+                    
+                    footer {
+                        background-color: rgb(51, 49, 51);
+                        text-align: left;
+                        display: flex;
+                        padding-left: 10px;
+                        & li {
+                            color: white;
+                            list-style-type: none;
+                            padding: 4px;
+                            font-size: 15px;
+                            & i {
+                                padding-right: 10px;
+                            }
+                            & a {
+                                color: inherit;
+                                &:visited,
+                                &:active {
+                                    color: inherit;
+                                }
+                            }
+                        }
+                        & .logo-name {
+                            font-family: 'Shrikhand', cursive;
+                            font-size: 20px;
+                        }
+                    }
+                    
+                    @import "mobile.scss";
+                    @import "tablette.scss";

@@ -1,0 +1,54 @@
+@media (min-width: 768px) and (max-width: 991px) {
+    .fonctionnement {
+        & ul {
+            margin-left: 15px;
+            width: 100%;
+            padding-top: 20px;
+            & li {
+                width: 34%;
+                & a {
+                    margin: 20px 30px 20px 10px;
+                }
+            }
+        }
+        & .number {
+            height: 30px;
+            width: 30px;
+            padding-top: 8px;
+            top: -30px;
+            left: 120px;
+        }
+        & .btn {
+            font-size: 15px;
+            margin-left: -25px;
+            width: 100%;
+            & i {
+                margin-right: 5px;
+            }
+        }
+    }
+    .restaurants {
+        & .restaurant-list-cards {
+            display: grid;
+            display: -ms-grid;
+            grid-template-columns: 1fr 1fr;
+            -ms-grid-columns: 1fr 1fr;
+            row-gap: 30px;
+            & .restaurant-list-card {
+                & .card-new {
+                    right: -260px;
+                }
+            }
+        }
+    }
+    .cart-menu-content {
+        flex-direction: column;
+        cursor: initial;
+        & .cart-menu-details {
+            margin: 0 20px;
+            & .underline {
+                padding-left: 60px;
+            }
+        }
+    }
+}

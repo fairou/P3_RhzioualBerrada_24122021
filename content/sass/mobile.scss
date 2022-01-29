@@ -1,0 +1,130 @@
+@media all and (max-device-width: 600px) {
+    header {
+        padding: 30px 0;
+        margin-bottom: 70px;
+        display: block;
+        & .header-logo {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        & .header-location {
+            width: 100vw;
+            height: 70px;
+            background-color: #EAEAEA;
+            & .search {
+                justify-content: center;
+                box-shadow: 0px -5px 4px 0px #c4c4c4;
+                & input[type=text] {
+                    border: 0;
+                    padding-left: 10px;
+                    border-radius: 0;
+                    height: 50px;
+                    background-color: transparent;
+                    &::-webkit-input-placeholder {
+                        /* Chrome/Opera/Safari */
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+                    &::-moz-placeholder {
+                        /* Chrome/Opera/Safari */
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+                    &:-ms-input-placeholder {
+                        /* Chrome/Opera/Safari */
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+                    &::-ms-input-placeholder {
+                        /* Chrome/Opera/Safari */
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+                    &::placeholder {
+                        /* Chrome/Opera/Safari */
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        & .noflex {
+            flex: auto;
+        }
+        .header-back {
+            margin-left: 10px;
+        }
+    }
+    .header-card {
+        display: inline-flex;
+    }
+    .fonctionnement {
+        & ul {
+            display: block;
+            margin-left: 30px;
+            width: 92%;
+        }
+        & a {
+            margin: 20px 20px 20px 0;
+        }
+        & .number {
+            height: 29px;
+            width: 33px;
+            padding-top: 8px;
+            left: -15px;
+        }
+        & .btn {
+            font-size: 18px;
+        }
+    }
+    .restaurants {
+        & .restaurant-list-cards {
+            flex-direction: column;
+            row-gap: 30px;
+            & .restaurant-list-card {
+                & .card-new {
+                    right: -240px;
+                }
+                & .card {
+                    & .card-img {
+                        height: 170px;
+                    }
+                }
+            }
+        }
+    }
+    .cart-menu {
+        & .cart-menu-title {
+            width: 100%;
+            border-radius: 30px 30px 0 0;
+            & h1 {
+                font-size: 30px;
+                margin-top: -10px;
+            }
+            & .logo_heart_2 {
+                margin-left: auto;
+            }
+        }
+    }
+    .cart-menu-content {
+        flex-direction: column;
+        cursor: initial;
+        & .cart-menu-details {
+            text-align: left;
+            margin: 0 20px;
+            & .cart-menu-detail {
+                width: 100%;
+                & .cart-menu-detail-title {
+                    & h2 {
+                        white-space: inherit;
+                        width: 235px;
+                        margin-top: 10px;
+                    }
+                }
+            }
+            & .underline {
+                padding-left: initial;
+            }
+        }
+    }
+}
