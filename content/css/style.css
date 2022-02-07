@@ -91,10 +91,10 @@ a:visited {
 }
 
 .section-loader {
-  height: 95vh;
   width: 100vw;
   margin: 0;
   padding: 0;
+  height: 100vh;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -184,17 +184,17 @@ main {
   animation: hideLoading 0s ease-in 5s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  visibility: hidden;
+  display: none;
 }
 
 @-webkit-keyframes hideLoading {
   to {
-    visibility: visible;
+    display: block !important;
   }
 }
 @keyframes hideLoading {
   to {
-    visibility: visible;
+    display: block !important;
   }
 }
 header {
