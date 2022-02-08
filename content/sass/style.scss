@@ -17,21 +17,15 @@
                     }
                     
                     .section-loader {
-                        // height: 95vh;
-                        width: 100vw;
-                        margin: 0;
-                        padding: 0;
-                        height: 100vh;
-                        // padding-top: 100px;
-                        display: flex;
-                        align-items: center;
-                        overflow: hidden;
-                        position: relative;
-                        -webkit-animation: showLoading 0s ease-in 5s;
-                        animation: showLoading 0s ease-in 5s;
+                        width: 100px;
+                        height: 100px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        -webkit-animation: showLoading 2s linear;
+                        animation: showLoading 2s linear;
                         -webkit-animation-fill-mode: forwards;
                         animation-fill-mode: forwards;
-                        justify-content: center;
                         & p {
                             color: $Primaire;
                             padding-left: 50px;
@@ -41,9 +35,6 @@
                     .loader {
                         width: 50px;
                         height: 50px;
-                        display: inline-block;
-                        vertical-align: middle;
-                        position: relative;
                     }
                     
                     .loader-anim {
