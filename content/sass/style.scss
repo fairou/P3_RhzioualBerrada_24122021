@@ -117,21 +117,21 @@
                         animation: hideLoading 0s ease-in 5s;
                         -webkit-animation-fill-mode: forwards;
                         animation-fill-mode: forwards;
-                        // visibility: hidden;
-                        display: none;
+                        visibility: hidden;
+                        //display: none;
                     }
                     
                     @-webkit-keyframes hideLoading {
                         to {
-                            // visibility: visible;
-                            display: block !important;
+                            visibility: visible;
+                            //display: block !important;
                         }
                     }
                     
                     @keyframes hideLoading {
                         to {
-                            // visibility: visible;
-                            display: block !important;
+                            visibility: visible;
+                            //display: block !important;
                         }
                     }
                     

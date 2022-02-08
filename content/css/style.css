@@ -184,17 +184,17 @@ main {
   animation: hideLoading 0s ease-in 5s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  display: none;
+  visibility: hidden;
 }
 
 @-webkit-keyframes hideLoading {
   to {
-    display: block !important;
+    visibility: visible;
   }
 }
 @keyframes hideLoading {
   to {
-    display: block !important;
+    visibility: visible;
   }
 }
 header {
