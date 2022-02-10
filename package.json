@@ -4,7 +4,7 @@
     "description": "P3",
     "main": "index.js",
     "scripts": {
-        "saas": "sass --watch ./content/sass/style.scss:./content/css/style.css"
+        "sass": "sass --watch ./content/sass/style.scss:./content/css/style.css"
     },
     "repository": {
         "type": "git",
