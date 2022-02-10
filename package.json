@@ -1,0 +1,19 @@
+{
+    "name": "package.json",
+    "version": "1.0.0",
+    "description": "P3",
+    "main": "index.js",
+    "scripts": {
+        "saas": "sass --watch ./content/sass/style.scss:./content/css/style.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/fairou/RhzioualBerrada_3_24122021.git"
+    },
+    "author": "Fairouz RHZIOUAL BERRADA",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/fairou/RhzioualBerrada_3_24122021/issues"
+    },
+    "homepage": "https://github.com/fairou/RhzioualBerrada_3_24122021#readme"
+}
